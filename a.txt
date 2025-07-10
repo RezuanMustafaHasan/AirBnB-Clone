@@ -1,0 +1,16 @@
+npm init -y
+npm i express
+npm i ejs
+npm i mongoose
+npm i method-override
+
+
+/question 
+req.login(registeredUser, (err) => {
+            if (err) {
+                return next(err);
+            }
+            req.flash('success', 'Welcome to Wanderlust!');
+            res.redirect('/listings');
+        });
+        

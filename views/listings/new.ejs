@@ -1,0 +1,45 @@
+<% layout('/layouts/boilerplate') %>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <h3 class="mb-3">Create a New Listing</h3>
+            <form action="/listings" method="POST" class="needs-validation" required novalidate enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" placeholder="Add a catchy title" name="listing[title]" required novalidate>
+                    <div class="valid-feedback">Title looks good!</div>
+                    <div class="invalid-feedback">Please choose a title</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" name="listing[description]" required novalidate></textarea>
+                     <div class="invalid-feedback">Please choose a description</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Image</label>
+                    <input type="file" class="form-control" name="listing[image]">
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input  class="form-control" placeholder="1200" name="listing[price]" required novalidate>
+                         <!--type="number" ^^^  -->
+                        <div class="invalid-feedback">Please choose a price</div>
+                    </div>
+ 
+                    <div class="mb-3 col-md-8">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" class="form-control" placeholder="Bangladesh" name="listing[country]" required novalidate>
+                        <div class="invalid-feedback">Please choose a country</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" class="form-control" placeholder="Banasree, Dhaka" name="listing[location]" required novalidate>
+                     <div class="invalid-feedback">Please choose a location</div>
+                </div>
+                <button class="btn btn-dark mb-3 add-btn mt-3">Add</button>
+            </form>
+        </div>
+    </div>
